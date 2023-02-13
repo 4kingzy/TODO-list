@@ -33,5 +33,24 @@
     align-items: center;
     height: 64px;
     border-bottom: 1px solid #efefef;
+    justify-content: space-between;
 
+}
+.todo__task-delete {
+    text-decoration: none;
+    color: #bb1c1c;
+    padding: 6px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.todo__error-message {
+    display:none;
+    font-size: 21px;
+    text-align: center;
+    background-color: #eb22225f;
+    color: #bb1c1c;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    padding: 16px;
 }
