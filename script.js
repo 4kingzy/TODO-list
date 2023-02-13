@@ -21,7 +21,7 @@ const renderToDoTasks = (tasks) => {
     tasks.forEach((task, index) => {
         const taskEl = document.createElement("div");
         taskEl.className = "todo__task";
-        taskEl.innerText = index + ". " + task;
+        taskEl.innerText = `${index + 1}. ${task}`;
         todoTasksList.appendChild(taskEl);
     });
 }
