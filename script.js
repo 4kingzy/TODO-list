@@ -1,5 +1,6 @@
 const inputEl = document.querySelector(".todo__input");
 const todoTasksEl = document.querySelectorAll(".todo__task");
+const todoTasksList = document.querySelector(".todo__tasks");
 const tasks = [];
 inputEl.addEventListener("keydown", (event) => {
     if (event.key === "Enter"){
@@ -16,7 +17,13 @@ inputEl.addEventListener("keydown", (event) => {
 });
 
 const renderToDoTasks = (tasks) => {
-    tasks.forEach((task) => console.log(task));
+    todoTasksList.innerHTML = "";
+    tasks.forEach((task, index) => {
+        const taskEl = document.createElement("div");
+        taskEl.className = "todo__task";
+        taskEl.innerText = index + ". " + task;
+        todoTasksList.appendChild(taskEl);
+    });
 }
 /* todoTasksEl.forEach((x) => x.addEventListener
     ("click", (event) => {
